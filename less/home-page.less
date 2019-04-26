@@ -11,10 +11,34 @@ main {
         .cta-content {
           .flex(column, space-between, flex-start, nowrap);
           margin-right: 2rem;
-          height: 18rem;
+          height: 20rem;
+        }
+      }
+    }
 
+    &.features {
+      .flex(row, center, center, nowrap);
+
+      .container {
+        max-width: 70rem;
+        .flex(row, center, center, nowrap);
+
+        .features-content {
           .title {
-            line-height: 1.15;
+            max-width: 56rem;
+            margin: 0 auto 3rem;
+            color: #1A2570;
+          }
+
+          .feature {
+            .flex(row, flex-start, flex-start, nowrap);
+            margin-bottom: 1rem;
+            
+            .icon { margin: 0 3rem; }
+            .body {
+              font-size: 2rem;
+              .strong { font-weight: bold; }
+            }
           }
         }
       }

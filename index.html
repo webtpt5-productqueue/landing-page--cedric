@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <title>Home - ProductQueue</title>
 </head>
 <body>
@@ -51,21 +52,21 @@
             Find the products you need, right when you need them.
           </h2>
           <div class="feature">
-            <span class="icon"></span>
+            <i data-feather="folder"></i>
             <p class="body">
               <span class="strong">Easily structure and navigate</span> through
               your team's products.
             </p>
           </div>
           <div class="feature">
-            <span class="icon"></span>
+            <i data-feather="search"></i>
             <p class="body">
               <span class="strong">Instantly find specific products</span> by
               searching through your team's products.
             </p>
           </div>
           <div class="feature">
-            <span class="icon"></span>
+            <i data-feather="users"></i>
             <p class="body">
               <span class="strong">Access to unlimited collaboration</span> by
               specifying roles within your team.
@@ -109,5 +110,11 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    feather.replace({
+      class: 'icon'
+    })
+  </script>
 </body>
 </html>
