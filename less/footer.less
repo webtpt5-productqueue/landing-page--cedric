@@ -1,0 +1,34 @@
+.footer {
+  height: 20rem;
+  background: #1A2570;
+  color: #f7f7f7;
+  .flex(column, center, center, nowrap);
+
+  .links {
+    .flex(row, space-between, center, nowrap);
+    
+    .logo {
+      width: 17rem;
+      overflow: hidden;
+  
+      svg {
+        width: 100%;
+        height: 3rem;
+        
+        path { fill: #f7f7f7; } 
+      }
+    }
+    .description {
+      color: #D7E0FF;
+      font-size: 1.4rem;
+    }
+    .link {
+      color: #f7f7f7;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

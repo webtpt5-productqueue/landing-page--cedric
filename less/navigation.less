@@ -1,0 +1,37 @@
+.navbar {
+  height: 8rem;
+  background: #D7E0FF;
+  .flex(row, center, center, nowrap);
+
+  .nav-wrapper {
+    .flex(row, space-between, center, nowrap);
+
+    .nav-start {
+
+      .logo {
+        width: 17rem;
+        overflow: hidden;
+    
+        svg {
+          width: 100%;
+          height: 3rem;
+          
+          path { fill: #1A2570; } 
+        }
+      }
+    }
+    .nav-end {
+      width: 24rem;
+      .flex(row, space-between, center, nowrap);
+
+      .link {
+      color: #1A2570;;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    }
+  }
+}
