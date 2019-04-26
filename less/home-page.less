@@ -1,0 +1,23 @@
+main {
+  .section {
+    height: calc(100vh - 8rem);
+
+    &.cta {
+      .flex(row, center, center, nowrap);
+
+      .container {
+        .flex(row, center, center, nowrap);
+
+        .cta-content {
+          .flex(column, space-between, flex-start, nowrap);
+          margin-right: 2rem;
+          height: 18rem;
+
+          .title {
+            line-height: 1.15;
+          }
+        }
+      }
+    }
+  }
+}
