@@ -1,0 +1,136 @@
+main {
+  .section {
+    min-height: calc(100vh - 8rem);
+
+    &.cta {
+      .flex(row, center, center, nowrap);
+
+      .container {
+        .flex(row, center, center, nowrap);
+
+        .cta-content {
+          .flex(column, space-between, flex-start, nowrap);
+          margin-right: 2rem;
+          height: 20rem;
+        }
+      }
+    }
+
+    &.features {
+      .flex(row, center, center, nowrap);
+
+      .container {
+        max-width: 70rem;
+        .flex(row, center, center, nowrap);
+
+        .features-content {
+          .title {
+            text-align: center;
+            max-width: 56rem;
+            margin: 0 auto 3rem;
+            color: #1A2570;
+          }
+
+          .feature {
+            .flex(row, flex-start, flex-start, nowrap);
+            margin-bottom: 1rem;
+            color: #333333;
+            
+            .icon { margin: 0 3rem; }
+            .body {
+              font-weight: 400;
+              font-size: 2.4rem;
+              .strong { font-weight: bold; }
+            }
+          }
+        }
+      }
+    }
+
+    &.cta-alt {
+      .flex(row, center, center, nowrap);
+      padding: 8rem 0;
+
+      .container {
+        .flex(column, center, center, nowrap);
+
+        .testimonials-wrapper {
+          max-width: 76rem;
+          margin: 0 0 5rem;
+
+          .title {
+            text-align: center;
+            max-width: 56rem;
+            margin: 0 auto 3rem;
+            color: #1A2570;
+          }
+          
+          .testimonials {
+            .flex(column, center, flex-start, nowrap);
+            position: relative;
+
+            .quotation-mark {
+              position: absolute;
+              top: -4rem;
+              left: -4rem;
+              font-family: 'Lalezar', sans-serif;
+              font-size: 10rem;
+              color: #D7E0FF;
+            }
+
+            .testimonial {
+              display: none;
+              
+              &.active {
+                .flex(column, center, flex-start, nowrap);
+
+                p {
+                  font-weight: 400;
+                  
+                  &.quote {
+                    font-size: 2.4rem;
+                    color: #333333;
+                    margin: 0 0 1rem;
+                  }
+
+                  &.author {
+                    align-self: flex-end;
+                    font-style: italic; 
+                    font-size: 2rem;
+                    color: #666666;
+                    margin: 0 0 3rem;
+                    
+                    &::before {
+                      content: "—";
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+          .customers {
+            .flex(row, space-evenly, center, nowrap);
+            
+            .customer {
+
+              img {
+                cursor: pointer;
+                width: 7.5rem;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+
+        .cta-alt-content {
+          .flex(column, space-evenly, center, nowrap);
+          height: 28rem;
+          padding: 6rem 8rem;
+          background: #D7E0FF;
+          border-radius: 2rem;
+        }
+      }
+    }
+  }
+}
