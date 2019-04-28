@@ -5,6 +5,13 @@
   font-weight: 400;
   src: local('Lalezar'), local('Lalezar-Regular'), url(https://fonts.gstatic.com/s/lalezar/v5/zrfl0HLVx-HwTP82Yaf4Jg.ttf) format('truetype');
 }
+/* 
+#FFFFFF     // white
+#F7F7F7     // off-white
+#D7E0FF     // periwinkle
+#46DBC9     // teal
+#1A2570     // navy
+*/
 .bg-white {
   background: #FFF;
 }
@@ -17,13 +24,6 @@
 .text-secondary {
   color: #333;
 }
-/* 
-#FFFFFF     // white
-#F7F7F7     // off-white
-#D7E0FF     // periwinkle
-#46DBC9     // teal
-#1A2570     // navy
-*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -187,6 +187,16 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
 .button {
   padding: 1rem 8rem;
   font-size: 2.4rem;
@@ -209,12 +219,31 @@ img {
   align-items: center;
   flex-wrap: nowrap;
 }
+@media (max-width: 500px) {
+  .navbar {
+    height: 12rem;
+  }
+}
 .navbar .nav-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media (max-width: 500px) {
+  .navbar .nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 500px) {
+  .navbar .nav-wrapper .nav-start {
+    margin-bottom: 1rem;
+  }
 }
 .navbar .nav-wrapper .nav-start .logo {
   width: 17rem;
