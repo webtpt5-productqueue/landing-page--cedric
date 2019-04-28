@@ -5,3 +5,10 @@
   align-items: @alignItems;
   flex-wrap: @wrap;
 }
+
+
+.responsive(@viewport; @rules) {
+  @media @viewport {
+    @rules()
+  }
+}
