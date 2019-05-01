@@ -6,25 +6,44 @@
 
   .links {
     .flex(row, space-between, center, nowrap);
+    .responsive(@mobile, {
+      .flex(column, center, flex-start, nowrap);
+    });
     
-    .logo {
-      width: 17rem;
-      overflow: hidden;
-  
-      svg {
-        width: 100%;
-        height: 3rem;
-        
-        path { fill: #f7f7f7; } 
+    .brand {
+      .responsive(@mobile, {
+        order: 1;
+      });
+
+      .logo {
+        width: 17rem;
+        overflow: hidden;
+        .responsive(@mobile, {
+          width: 14rem;
+        });
+    
+        svg {
+          width: 100%;
+          height: 3rem;
+          
+          path { fill: #f7f7f7; } 
+        }
+      }
+      .description {
+        color: #D7E0FF;
+        font-size: 1.4rem;
+        .responsive(@mobile, {
+          font-size: 1.2rem;
+        });
       }
     }
-    .description {
-      color: #D7E0FF;
-      font-size: 1.4rem;
-    }
+
     .link {
       color: #f7f7f7;
       text-decoration: none;
+      .responsive(@mobile, {
+        margin-bottom: 1rem;
+      });
 
       &:hover {
         text-decoration: underline;

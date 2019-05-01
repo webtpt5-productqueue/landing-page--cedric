@@ -2,11 +2,20 @@
   height: 8rem;
   background: #D7E0FF;
   .flex(row, center, center, nowrap);
+  .responsive(@mobile, {
+    height: 12rem;
+  });
 
   .nav-wrapper {
     .flex(row, space-between, center, nowrap);
+    .responsive(@mobile, {
+      .flex(column, space-between, center, nowrap);
+    });
 
     .nav-start {
+      .responsive(@mobile, {
+        margin-bottom: 1rem;
+      });
 
       .logo {
         width: 17rem;
@@ -20,6 +29,7 @@
         }
       }
     }
+    
     .nav-end {
       width: 24rem;
       .flex(row, space-between, center, nowrap);
@@ -28,10 +38,10 @@
       color: #1A2570;;
       text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
       }
-    }
     }
   }
 }

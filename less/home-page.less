@@ -7,11 +7,51 @@ main {
 
       .container {
         .flex(row, center, center, nowrap);
+        .responsive(@tablet, {
+          .flex(column, center, center, nowrap);
+          margin: 2rem 0;
+        });
 
         .cta-content {
           .flex(column, space-between, flex-start, nowrap);
           margin-right: 2rem;
           height: 20rem;
+          // Tablet @media-query
+          .responsive(@tablet, {
+            margin-right: 0;
+            height: auto;
+
+            .title {
+              margin-bottom: 2rem;
+              text-align: center;
+              font-size: 3.6rem;
+            }
+
+            .button {
+              display: none;
+            }
+          });
+
+          // Mobile @media-query
+          .responsive(@mobile, {
+            .title {
+              margin-bottom: 3rem;
+              font-size: 2.8rem;
+            }
+          });
+        }
+
+        .illustration {
+          .responsive(@tablet, {
+            max-width: 40rem;
+          });
+        }
+
+        .button.hidden {
+          .responsive(@tablet, {
+            display: flex;
+            margin-top: 2rem;
+          });
         }
       }
     }
@@ -29,6 +69,10 @@ main {
             max-width: 56rem;
             margin: 0 auto 3rem;
             color: #1A2570;
+            .responsive(@mobile, {
+              font-size: 2.2rem;
+              text-align: left;
+            });
           }
 
           .feature {
@@ -36,11 +80,21 @@ main {
             margin-bottom: 1rem;
             color: #333333;
             
-            .icon { margin: 0 3rem; }
+            .icon {
+              margin: 0 3rem;
+              .responsive(@mobile, {
+                margin: 0 1rem 0 0;
+                width: 4rem;
+              });
+            }
+            
             .body {
               font-weight: 400;
               font-size: 2.4rem;
               .strong { font-weight: bold; }
+              .responsive(@mobile, {
+                font-size: 1.8rem;
+              })
             }
           }
         }
@@ -56,13 +110,17 @@ main {
 
         .testimonials-wrapper {
           max-width: 76rem;
-          margin: 0 0 5rem;
+          margin: 5rem 0;
 
           .title {
             text-align: center;
             max-width: 56rem;
             margin: 0 auto 3rem;
             color: #1A2570;
+            .responsive(@mobile, {
+              font-size: 2.2rem;
+              text-align: left;
+            });
           }
           
           .testimonials {
@@ -76,6 +134,9 @@ main {
               font-family: 'Lalezar', sans-serif;
               font-size: 10rem;
               color: #D7E0FF;
+              .responsive(@mobile, {
+                left: -2rem;
+              });
             }
 
             .testimonial {
@@ -91,6 +152,10 @@ main {
                     font-size: 2.4rem;
                     color: #333333;
                     margin: 0 0 1rem;
+                    .responsive(@mobile, {
+                      z-index: 100;
+                      font-size: 1.8rem;
+                    });
                   }
 
                   &.author {
@@ -99,6 +164,9 @@ main {
                     font-size: 2rem;
                     color: #666666;
                     margin: 0 0 3rem;
+                    .responsive(@mobile, {
+                      font-size: 1.6rem;
+                    });
                     
                     &::before {
                       content: "—";
@@ -118,6 +186,9 @@ main {
                 cursor: pointer;
                 width: 7.5rem;
                 border-radius: 50%;
+                .responsive(@mobile, {
+                  width: 6rem;
+                });
               }
             }
           }
@@ -125,10 +196,38 @@ main {
 
         .cta-alt-content {
           .flex(column, space-evenly, center, nowrap);
-          height: 28rem;
+          margin: 5rem 0;
+          max-width: 84rem;
+          min-height: 28rem;
           padding: 6rem 8rem;
           background: #D7E0FF;
           border-radius: 2rem;
+          text-align: center;
+          .responsive(@mobile, {
+            margin: 0;
+            padding: 2rem 3rem;
+          });
+
+          .title {
+            max-width: 56rem;
+            margin: 0 auto 2rem;
+            color: #1A2570;
+            .responsive(@mobile, {
+              font-size: 2.2rem;
+              text-align: left;
+            });
+          }
+
+          .content {
+            margin: 0 auto 2rem;
+            color: #333333;
+            font-weight: 400;
+            font-size: 2.4rem;
+            .responsive(@mobile, {
+              font-size: 1.8rem;
+              text-align: left;
+            });
+          }
         }
       }
     }
