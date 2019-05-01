@@ -720,10 +720,9 @@ main .section.cta-alt .container .cta-alt-content .content {
   }
 }
 .about main .about-us .container .stats .stat .icon {
+  width: 4rem;
+  height: 4rem;
   margin-right: 1.5rem;
-}
-.about main .about-us .container .stats .stat .icon .emoji-wrapper {
-  font-size: 4rem;
 }
 .about main .about-us .container .stats .stat .stat-content .title {
   font-size: 1.2rem;
