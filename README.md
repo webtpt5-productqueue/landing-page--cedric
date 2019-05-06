@@ -29,7 +29,8 @@ command:
 $ less-watch-compiler less css index.less
 ```
 
-
+When making styling changes, there is a style guide provided
+(`design-files/style-guide.png`) to assist with color and typography choices.
 
 ![Product**Queue** style guide](design-files/style-guide.png)
 
